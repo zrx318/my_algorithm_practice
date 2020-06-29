@@ -1,4 +1,4 @@
-package com.rongxin.tooffer;
+package main.java.com.rongxin.tooffer;
 
 /**
  * @ClassName Solution25
@@ -46,14 +46,14 @@ public class Solution25 {
 
         return res;
     }
-}
+    class RandomListNode {
+        int label;
+        RandomListNode next = null;
+        RandomListNode random = null;
 
-class RandomListNode {
-    int label;
-    RandomListNode next = null;
-    RandomListNode random = null;
-
-    RandomListNode(int label) {
-        this.label = label;
+        RandomListNode(int label) {
+            this.label = label;
+        }
     }
+
 }
