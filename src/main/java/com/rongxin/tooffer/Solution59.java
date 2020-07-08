@@ -20,12 +20,17 @@ public class Solution59 {
         }
         Queue<TreeNode> q = new LinkedList<>();
         q.add(pRoot);
-
+        boolean flag = true;
         while (!q.isEmpty()) {
+            int size = q.size();
             ArrayList<Integer> list = new ArrayList<>();
-            while (!q.isEmpty()) {
+            for (int i = 0; i < size; i++) {
                 TreeNode poll = q.poll();
-                list.add(poll.val);
+                if (flag) {
+                    list.add(poll.val);
+                } else {
+                    list.add(0,poll.val);
+                }
                 if (poll.left != null) {
                     q.add(poll.left);
                 }
@@ -33,6 +38,8 @@ public class Solution59 {
                     q.add(poll.right);
                 }
             }
+            res.add(list);
+            flag = !flag;
         }
         return res;
     }
