@@ -1,4 +1,4 @@
-package com.rongxin;
+package com.rongxin.extra;
 
 class KVCache<K, V> {
 	Node head = new Node();

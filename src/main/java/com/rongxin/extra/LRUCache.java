@@ -1,4 +1,4 @@
-package com.rongxin;
+package com.rongxin.extra;
 
 public class LRUCache<K, V> {
     public static void main(String[] args) {
